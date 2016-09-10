@@ -1,6 +1,6 @@
 
 %% loading data
-load('data_AWA');
+load('../data/data_AWA');
 [train_X, xval_mean, xval_variance, xval_max] = normalization(train_X);
 [trainval_X, xtest_mean, xtest_variance, xtest_max] = normalization(trainval_X);
 val_X = normalization(val_X, xval_mean, xval_variance, xval_max);

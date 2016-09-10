@@ -1,6 +1,6 @@
 %% Set the parameters
 param.eta = 1e-3;               %learning rate, should be tuned on the validation set
-param.nepoch = 15;              %number of epochs, fixed
+param.nepoch = 5;              %number of epochs, fixed
 param.cls_emb = 'cont';         %name of class embedding to evaluate, you can also use 'glove', 'wordnet' and 'cont'
 
 %% loading data

@@ -6,7 +6,7 @@ data = '../data/data_AWA_cont.mat';
 
 load(model);
 load(data);
-imageroot = '/BS/xian/work/GCPR_tutorial/demo/images/';
+imageroot = '/Users/yxian/Desktop/GCPR_tutorial/demo/images/';
 save(data, 'imageroot', 'img_list', 'test_classnames', 'test_labels', 'test_X', 'test_Y');
 
 [~, idx_class] = ismember(class_name, test_classnames);
