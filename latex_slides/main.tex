@@ -292,8 +292,7 @@ Objective function
 \begin{frame}{Demo}
 Dataset: Animal with Attributes, train 40 cls, test 10 cls
 \begin{itemize}
-\item Task 1: Image Classification \\ 
-\includegraphics[width=0.1\textwidth]{seal}
+\item Task 1: Image Classification
 \item Task 2: Image Retrieval
 \end{itemize}
 %\begin{enumerate}
@@ -302,7 +301,7 @@ Dataset: Animal with Attributes, train 40 cls, test 10 cls
 %\end{enumerate}
 
 \begin{equation*}
-	\argmax_{i} \theta(x_i)^\top W \varphi(y) 
+	\argmax_{x\in X} \theta(x)^\top W \varphi(y) 
 \end{equation*}
 %\center
 %\includegraphics[width=0.7\textwidth]{sje_cont_AWA}
@@ -397,7 +396,14 @@ Objective function
 %----------------------------------------------------------------------------------------
 \begin{frame}{Demo}
 
-
+Dataset: Animal with Attributes, train 40 cls, test 10 cls
+\begin{itemize}
+	\item Task 1: Image Classification
+	\item Task 2: Image Retrieval
+\end{itemize}
+\begin{equation*}
+\argmax_{x\in X, y \in Y} \theta(x) W_i \varphi(y)
+\end{equation*}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
