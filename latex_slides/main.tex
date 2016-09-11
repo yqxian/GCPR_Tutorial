@@ -123,7 +123,7 @@
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
 
-\title{Practical session on Embeddings Applied to Zero-shot Learning} 
+\title{Practical Session on Embeddings Applied to Zero-shot Learning} 
 \author{Yongqin Xian \vspace{2mm}\\}
 \institute{Max-Planck Institute for Informatics}
 \date{12 September 2016}
@@ -167,7 +167,8 @@
 
 \end{itemize}
 
-
+Please download the code and data at: \\
+\url{https://github.com/yqxian/GCPR_Tutorial}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
@@ -181,7 +182,7 @@ Training phase:
 \begin{equation*}
 S = \{(x, y)| x \in X, y \in Y \}
 \end{equation*}
-
+\pause
 \item{Extract image and class embeddings} 
 \begin{equation*}
 S_{\theta, \varphi} = \{(\theta(x), \varphi(y))| \theta(x) \in \X, \varphi(y) \in \Y \}
@@ -249,7 +250,7 @@ f(x; W) = \argmax_{y\in Y} \theta(x)^T W \varphi(y),
 
 Objective function
 \begin{equation*}
-    \min_W \frac{1}{N} \sum_{n=1}^{N} \max_{y\in Y \setminus \{y_n\}} \{0, \D(y_n,y) + \theta(x_n)^T W \varphi(y)-\theta(x_n)^T W \varphi(y_n)\},
+    \min_W \frac{1}{N} \sum_{n=1}^{N} \max_{y\in Y } \{0, \D(y_n,y) + \theta(x_n)^T W \varphi(y)-\theta(x_n)^T W \varphi(y_n)\},
 \end{equation*}
 
 \end{frame}
@@ -293,6 +294,7 @@ Objective function
 Dataset: Animal with Attributes, train 40 cls, test 10 cls
 \begin{itemize}
 \item Task 1: Image Classification
+\pause
 \item Task 2: Image Retrieval
 \end{itemize}
 %\begin{enumerate}
@@ -399,11 +401,24 @@ Objective function
 Dataset: Animal with Attributes, train 40 cls, test 10 cls
 \begin{itemize}
 	\item Task 1: Image Classification
+	\pause
 	\item Task 2: Image Retrieval
 \end{itemize}
 \begin{equation*}
 \argmax_{x\in X, y \in Y} \theta(x) W_i \varphi(y)
 \end{equation*}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	Reference Frame
+%----------------------------------------------------------------------------------------
+\begin{frame}{Reference}
+
+	%\small
+	Akata, Zeynep, et al. "Evaluation of output embeddings for fine-grained image classification." IEEE CVPR 2015. \\
+	\vspace{0.2in}
+	Xian, Yongqin, et al. "Latent Embedding for Zero-shot Classification." IEEE CVPR 2016.
+	
 \end{frame}
 
 %----------------------------------------------------------------------------------------
@@ -413,7 +428,6 @@ Dataset: Animal with Attributes, train 40 cls, test 10 cls
 \center
 \huge
 Thank you!
-
 \end{frame}
 
 
