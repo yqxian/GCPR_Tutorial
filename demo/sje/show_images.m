@@ -12,5 +12,3 @@ for i=1:n_row
     count = count + 1;
   end
 end
-
-print(1,'-dpdf','W1.pdf');

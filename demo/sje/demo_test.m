@@ -9,5 +9,7 @@ test_X = normalization(test_X, xtest_mean, xtest_variance, xtest_max);
 %% Train the model using train+val data with the eta and K selected on the validation set
 disp('Load the model...');
 load('../models/model_sje_AWA.mat');
-acc_test = sje_test(W, test_X, test_Y('cont'), test_labels);
+[acc_test, per_class_acc, conf_mat] = sje_test(W, test_X, test_Y('cont'), test_labels);
 disp(['Mean class accuracy=' num2str(acc_test)]);
+
+show_conf_mat(conf_mat, per_class_acc, 'testclasses.txt');
