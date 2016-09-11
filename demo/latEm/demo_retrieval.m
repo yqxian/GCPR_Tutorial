@@ -1,3 +1,4 @@
+n_nearest = 5;
 
 model = '../models/model_latEm_cont_AWA.mat';
 data = '../data/data_AWA_cont.mat';

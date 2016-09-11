@@ -11,3 +11,4 @@ imagesc(conf_mat);
 colormap('hot');
 set(gca, 'XTick', 1:10, 'XTickLabel', classnames);
 set(gca, 'YTick', 1:10, 'YTickLabel', classnames);
+colorbar
